@@ -3,7 +3,11 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import Projects from './pages/Projects'
+import ProjectsLayout from './pages/Projects/Layout'
+import ProjectsAll from './pages/Projects/All'
+import ProjectsInProgress from './pages/Projects/InProgress'
+import ProjectsCompleted from './pages/Projects/Completed'
+import ProjectsPlanned from './pages/Projects/Planned'
 import ProjectDetail from './pages/ProjectDetail'
 import Employees from './pages/Employees'
 import EmployeeDetail from './pages/EmployeeDetail'
@@ -20,7 +24,12 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<ProjectsLayout />}>
+            <Route index element={<ProjectsAll />} />
+            <Route path="in-progress" element={<ProjectsInProgress />} />
+            <Route path="completed" element={<ProjectsCompleted />} />
+            <Route path="planned" element={<ProjectsPlanned />} />
+          </Route>
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/employees" element={<Employees />} />
           <Route path="/employees/:id" element={<EmployeeDetail />} />

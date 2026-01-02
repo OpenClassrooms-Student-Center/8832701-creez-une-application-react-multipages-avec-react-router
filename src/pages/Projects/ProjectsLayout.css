@@ -1,0 +1,20 @@
+.projects-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.projects-link {
+  padding: 0.5rem 1rem;
+  color: #ccc;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.projects-link.active {
+  background: #646cff;
+  color: #fff;
+}
