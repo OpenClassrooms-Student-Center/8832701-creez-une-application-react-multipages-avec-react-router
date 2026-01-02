@@ -1,12 +1,11 @@
+import { useParams, useNavigate } from 'react-router-dom'
 import { getEmployeeById } from '../../data/employees'
 import './EmployeeDetail.css'
 
-// Note pour l'étudiant : Dans le chapitre 2, vous utiliserez useParams()
-// pour récupérer l'ID depuis l'URL. Pour l'instant, on affiche l'employé avec l'id 1.
 function EmployeeDetail() {
-  // Dans le chapitre 2, cette ligne sera remplacée par :
-  // const { id } = useParams()
-  const id = 1
+  // Récupération de l'ID depuis l'URL
+  const { id } = useParams()
+  const navigate = useNavigate()
 
   const employee = getEmployeeById(parseInt(id))
 
@@ -23,6 +22,10 @@ function EmployeeDetail() {
 
   return (
     <div className="page">
+      <button onClick={() => navigate('/employees')} className="back-button">
+        ← Retour à la liste
+      </button>
+
       <div className="employee-detail">
         <div className="employee-detail-header">
           <img
