@@ -66,3 +66,8 @@ export const projectsData = [
 export const getProjectsByStatus = (status) => {
   return projectsData.filter(project => project.status === status)
 }
+
+// Fonction utilitaire pour obtenir un projet par son ID
+export const getProjectById = (id) => {
+  return projectsData.find(project => project.id === id)
+}
