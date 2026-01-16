@@ -2,13 +2,13 @@
 export const employeesData = [
   {
     id: 1,
-    name: "Sophie Martin",
-    position: "Développeuse Full-Stack",
+    name: "Pierre Martin",
+    position: "Développeur Full-Stack",
     department: "Technique",
-    email: "sophie.martin@entreprise.com",
+    email: "pierre.martin@entreprise.com",
     phone: "01 23 45 67 89",
     avatar: "https://i.pravatar.cc/150?img=1",
-    bio: "Développeuse passionnée avec 5 ans d'expérience en React et Node.js. Spécialisée dans les applications web modernes.",
+    bio: "Développeur passionné avec 5 ans d'expérience en React et Node.js. Spécialisé dans les applications web modernes.",
     skills: ["React", "Node.js", "TypeScript", "PostgreSQL"]
   },
   {
